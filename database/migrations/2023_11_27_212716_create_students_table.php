@@ -18,7 +18,7 @@ return new class extends Migration
             $table->bigInteger('dni')->unique();
             $table->bigInteger('phone')->unique();
             $table->bigInteger('bundle')->unique();
-            $table->boolean('active');
+            $table->boolean('active')->default(true);
             $table->unsignedBigInteger('degree_id');
             $table->unsignedBigInteger('subject_id');
             $table->timestamps();

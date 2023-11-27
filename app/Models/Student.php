@@ -10,6 +10,16 @@ class Student extends Model
     use HasFactory;
     protected $table='students';
 
+    protected $fillable=[
+        'name',
+        'last_name',
+        'dni',
+        'phone',
+        'bundle',
+        'degree_id',
+        'subject_id'
+    ];
+
     // Relacion de uno a muchos con Degree
     public function degrees(){
         return $this->belongsTo(Degree::class);

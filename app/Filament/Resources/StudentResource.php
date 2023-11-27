@@ -61,8 +61,10 @@ class StudentResource extends Resource
                     ->searchable(),
                 TextColumn::make('last_name')
                     ->searchable(),
-                TextColumn::make('dni'),
-                TextColumn::make('bundle'),
+                TextColumn::make('dni')
+                ->searchable(),
+                TextColumn::make('bundle')
+                ->searchable(),
                 TextColumn::make('active'),
                 TextColumn::make('degree_id'),
                 TextColumn::make('subject_id'),

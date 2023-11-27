@@ -12,6 +12,11 @@ class Degree extends Model
 
     protected $table='degrees';
 
+    protected $fillable=[
+        'name',
+        'duration',
+    ];
+
     // Relacion de uno a muchos con Student
     public function students(){
         return $this->hasMany(Student::class);

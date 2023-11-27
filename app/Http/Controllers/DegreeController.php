@@ -35,6 +35,7 @@ class DegreeController extends Controller
      */
     public function store(Request $request)
     {
+
         $request -> validate([
             'name'=>'required|unique:degrees|max:50',
             'duration'=>'required',

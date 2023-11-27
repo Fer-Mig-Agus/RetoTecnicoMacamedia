@@ -41,7 +41,6 @@ class SubjectController extends Controller
             'duration'=>$request->duration,
             'class_hours'=>$request->class_hours,
             'degree_id'=>$request->degree_id,
-            'status_id'=>2,
         ]);
 
         return $subject;

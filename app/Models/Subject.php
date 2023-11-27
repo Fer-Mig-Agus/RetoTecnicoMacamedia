@@ -10,6 +10,14 @@ class Subject extends Model
     use HasFactory;
     protected $table='subjects';
 
+    protected $fillable=[
+        'name',
+        'duration',
+        'class_hours',
+        'degree_id',
+        'status_id',
+    ];
+
     // Relacion de muchos a muchos con Student
     public function students(){
         return $this->belongsToMany(Student::class);
