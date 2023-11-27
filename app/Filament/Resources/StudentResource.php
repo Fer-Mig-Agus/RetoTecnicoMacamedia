@@ -42,10 +42,12 @@ class StudentResource extends Resource
                     ->options(Degree::all()->pluck('name', 'id'))
                     ->searchable(),
 
-                Select::make('subject_id')
-                    ->label('Subject')
-                    ->options(Subject::all()->pluck('name', 'id'))
-                    ->searchable(),
+                Select::make('active')
+                    ->label('Active')
+                    ->options([
+                        true => 'Yes',
+                        false => 'No'
+                    ]),
 
 
 
@@ -62,12 +64,11 @@ class StudentResource extends Resource
                 TextColumn::make('last_name')
                     ->searchable(),
                 TextColumn::make('dni')
-                ->searchable(),
+                    ->searchable(),
                 TextColumn::make('bundle')
-                ->searchable(),
+                    ->searchable(),
                 TextColumn::make('active'),
                 TextColumn::make('degree_id'),
-                TextColumn::make('subject_id'),
 
             ])
             ->filters([
@@ -77,6 +78,8 @@ class StudentResource extends Resource
                         true => 'Yes',
                         false => 'No',
                     ])
+
+                
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

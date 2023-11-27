@@ -34,9 +34,9 @@ class StudentController extends Controller
             'last_name'=>'required|max:50',
             'dni'=>'required|unique:students',
             'phone'=>'required|unique:students',
+            'active'=>'required',
             'bundle'=>'required|unique:students',
             'degree_id'=>'required',
-            'subject_id'=>'required',
         ]);
 
         $degree=Student::create([
@@ -45,9 +45,8 @@ class StudentController extends Controller
             'dni'=>$request->dni,
             'phone'=>$request->phone,
             'bundle'=>$request->bundle,
-            'active'=>true,
+            'active'=>$request->active,
             'degree_id'=>$request->degree_id,
-            'subject_id'=>$request->subject_id,
         ]);
 
         return $degree;
@@ -80,9 +79,9 @@ class StudentController extends Controller
             'last_name'=>'required|max:50',
             'dni'=>'required|unique:students,dni,'.$student->id,
             'phone'=>'required|unique:students,phone,'.$student->id,
+            'active'=>'required',
             'bundle'=>'required|unique:students,bundle,'.$student->id,
             'degree_id'=>'required',
-            'subject_id'=>'required',
         ]);
 
         $student->update($request->all());

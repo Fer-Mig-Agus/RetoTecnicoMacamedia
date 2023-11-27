@@ -20,11 +20,9 @@ return new class extends Migration
             $table->bigInteger('bundle')->unique();
             $table->boolean('active')->default(true);
             $table->unsignedBigInteger('degree_id');
-            $table->unsignedBigInteger('subject_id');
             $table->timestamps();
 
             $table->foreign('degree_id')->references('id')->on('degrees');
-            $table->foreign('subject_id')->references('id')->on('subjects');
         });
     }
 

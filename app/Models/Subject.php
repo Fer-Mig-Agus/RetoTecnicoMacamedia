@@ -15,19 +15,18 @@ class Subject extends Model
         'duration',
         'class_hours',
         'degree_id',
-        'status_id',
     ];
 
-    // Relacion de muchos a muchos con Student
-    public function students(){
-        return $this->belongsToMany(Student::class);
-    }
+    // // Relacion de muchos a muchos con Student
+    // public function students(){
+    //     return $this->belongsToMany(Student::class);
+    // }
 
-    // Relacion de uno a muchos con Status
-    public function statuses()
-    {
-        return $this->belongsTo(Status::class);
-    }
+    // // Relacion de uno a muchos con Status
+    // public function statuses()
+    // {
+    //     return $this->belongsTo(Status::class);
+    // }
 
     //Relacion de uno a muchos con Degree
     public function degrees()

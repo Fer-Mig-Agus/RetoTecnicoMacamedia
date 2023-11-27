@@ -16,8 +16,8 @@ class Student extends Model
         'dni',
         'phone',
         'bundle',
+        'active',
         'degree_id',
-        'subject_id'
     ];
 
     // Relacion de uno a muchos con Degree
@@ -26,10 +26,10 @@ class Student extends Model
     }
 
 
-     // Relacion de muchos a muchos con Subject
-     public function subjects(){
-        return $this->belongsToMany(Subject::class);
-    }
+    //  // Relacion de muchos a muchos con Subject
+    //  public function subjects(){
+    //     return $this->belongsToMany(Subject::class);
+    // }
 
     
 

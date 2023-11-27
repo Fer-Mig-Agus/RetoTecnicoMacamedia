@@ -21,7 +21,6 @@ class StudentSeeder extends Seeder
                 'bundle'=>11119999,
                 'active'=>true,
                 'degree_id'=>1,
-                'subject_id'=>1,
 
             ],
             [
@@ -32,7 +31,6 @@ class StudentSeeder extends Seeder
                 'bundle'=>11119998,
                 'active'=>true,
                 'degree_id'=>1,
-                'subject_id'=>2,
 
             ],
             [
@@ -43,7 +41,6 @@ class StudentSeeder extends Seeder
                 'bundle'=>11119799,
                 'active'=>true,
                 'degree_id'=>2,
-                'subject_id'=>3,
 
             ],
             [
@@ -54,7 +51,6 @@ class StudentSeeder extends Seeder
                 'bundle'=>10009949,
                 'active'=>true,
                 'degree_id'=>2,
-                'subject_id'=>4,
 
             ],
             [
@@ -65,7 +61,6 @@ class StudentSeeder extends Seeder
                 'bundle'=>10019999,
                 'active'=>true,
                 'degree_id'=>3,
-                'subject_id'=>5,
 
             ],
             [
@@ -76,7 +71,6 @@ class StudentSeeder extends Seeder
                 'bundle'=>10409999,
                 'active'=>true,
                 'degree_id'=>3,
-                'subject_id'=>6,
 
             ],
             [
@@ -87,7 +81,6 @@ class StudentSeeder extends Seeder
                 'bundle'=>12009999,
                 'active'=>true,
                 'degree_id'=>4,
-                'subject_id'=>7,
 
             ],
             [
@@ -98,7 +91,6 @@ class StudentSeeder extends Seeder
                 'bundle'=>103409999,
                 'active'=>true,
                 'degree_id'=>4,
-                'subject_id'=>8,
 
             ],
             [
@@ -109,7 +101,6 @@ class StudentSeeder extends Seeder
                 'bundle'=>30009991,
                 'active'=>true,
                 'degree_id'=>5,
-                'subject_id'=>9,
 
             ],
             [
@@ -120,7 +111,6 @@ class StudentSeeder extends Seeder
                 'bundle'=>10010999,
                 'active'=>true,
                 'degree_id'=>5,
-                'subject_id'=>10,
 
             ],
             ];

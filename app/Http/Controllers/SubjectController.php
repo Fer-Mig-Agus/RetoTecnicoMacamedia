@@ -74,7 +74,6 @@ class SubjectController extends Controller
             'duration'=>'required',
             'class_hours'=>'required',
             'degree_id'=>'required',
-            'status_id'=>'required',
         ]);
 
         $subject->update($request->all());

@@ -14,6 +14,7 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -64,7 +65,14 @@ class SubjectResource extends Resource
                 
             ])
             ->filters([
-                //
+
+                SelectFilter::make('duration')
+                    ->options([
+                        'Quadrimestral' => 'Quadrimestral',
+                        'Annual' => 'Annual',
+                    ]),
+
+                    // SelectFilter::make('degree')->relationship('degree_id','name')
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
