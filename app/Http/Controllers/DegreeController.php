@@ -5,8 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Degree;
 use Illuminate\Http\Request;
 
+use Filament\Tables\Table;
+
 class DegreeController extends Controller
 {
+
+
+
     /**
      * Display a listing of the resource.
      */

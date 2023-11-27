@@ -21,6 +21,12 @@ class Subject extends Model
         return $this->belongsTo(Status::class);
     }
 
+    //Relacion de uno a muchos con Degree
+    public function degrees()
+    {
+        return $this->belongsTo(Degree::class,'degree_id');
+    }
+
 
 
 }

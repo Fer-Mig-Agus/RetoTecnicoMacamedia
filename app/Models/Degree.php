@@ -17,4 +17,10 @@ class Degree extends Model
         return $this->hasMany(Student::class);
     }
 
+    //Relacion de uno a mucho con Subject
+    public function subjects()
+    {
+        return $this->hasMany(Subject::class,'degree_id');
+    }
+
 }

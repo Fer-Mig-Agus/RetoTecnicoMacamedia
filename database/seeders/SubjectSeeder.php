@@ -15,71 +15,71 @@ class SubjectSeeder extends Seeder
     {
         $subjects=[
             [
-                'name'=>'Organizacion del computador',
-                'duration'=>'cuatrimestral',
+                'name'=>'Computer organisation',
+                'duration'=>'Quadrimestral',
                 'class_hours'=>40,
                 'degree_id'=>1,
                 'status_id'=>2
             ],
             [
-                'name'=>'Arquitectura del computador',
-                'duration'=>'anual',
+                'name'=>'Computer architecture',
+                'duration'=>'Annual',
                 'class_hours'=>120,
                 'degree_id'=>1,
                 'status_id'=>2
             ],
             [
-                'name'=>'Speaking all',
-                'duration'=>'cuatrimestral',
+                'name'=>'Advanced speaking',
+                'duration'=>'Quadrimestral',
                 'class_hours'=>40,
                 'degree_id'=>2,
                 'status_id'=>2
             ],
             [
-                'name'=>'Writting all',
-                'duration'=>'anual',
+                'name'=>'Advanced writting',
+                'duration'=>'Annual',
                 'class_hours'=>140,
                 'degree_id'=>2,
                 'status_id'=>2
             ],
             [
-                'name'=>'Sistemas avanzandos',
-                'duration'=>'cuatrimestral',
+                'name'=>'Advanced systems',
+                'duration'=>'Quadrimestral',
                 'class_hours'=>40,
                 'degree_id'=>3,
                 'status_id'=>2
             ],
             [
-                'name'=>'Sistemas avanzandos II',
-                'duration'=>'anual',
+                'name'=>'Advanced systems II',
+                'duration'=>'Annual',
                 'class_hours'=>40,
                 'degree_id'=>3,
                 'status_id'=>2
             ],
             [
-                'name'=>'El mundo virtual',
-                'duration'=>'cuatrimestral',
+                'name'=>'The virtual world',
+                'duration'=>'Quadrimestral',
                 'class_hours'=>40,
                 'degree_id'=>4,
                 'status_id'=>2
             ],
             [
-                'name'=>'El mundo virtual segun migui',
-                'duration'=>'anual',
+                'name'=>'The virtual world according to Miguel',
+                'duration'=>'Annual',
                 'class_hours'=>120,
                 'degree_id'=>4,
                 'status_id'=>2
             ],
             [
-                'name'=>'Tipos de organismos',
-                'duration'=>'cuatrimestral',
+                'name'=>'Types of organisms',
+                'duration'=>'Quadrimestral',
                 'class_hours'=>40,
                 'degree_id'=>5,
                 'status_id'=>2
             ],
             [
-                'name'=>'Tipos de virus',
-                'duration'=>'anual',
+                'name'=>'Types of viruses',
+                'duration'=>'Annual',
                 'class_hours'=>140,
                 'degree_id'=>5,
                 'status_id'=>2

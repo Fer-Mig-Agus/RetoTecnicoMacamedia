@@ -15,23 +15,23 @@ class DegreeSeeder extends Seeder
     {
         $degrees=[
             [
-                'name'=>'Lic. Sistemas',
+                'name'=>'Lic. Systems',
                 'duration'=> 5
             ],
             [
-                'name'=>'Lic. Ingles',
+                'name'=>'Lic. English',
                 'duration'=> 4
             ],
             [
-                'name'=>'Tecnico superior en sistemas',
+                'name'=>'Higher systems technician',
                 'duration'=> 3
             ],
             [
-                'name'=>'Doctorado. Sistemas',
+                'name'=>'Doc. Systems',
                 'duration'=> 6
             ],
             [
-                'name'=>'Lic. Medicina',
+                'name'=>'Lic. Medicine',
                 'duration'=> 7
             ]
             ];

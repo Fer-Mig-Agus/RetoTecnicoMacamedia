@@ -14,10 +14,10 @@ class StatusSeeder extends Seeder
     public function run(): void
     {
         $statuses=[
-            'APROBADO',
-            'DESAPROBADO',
-            'REGULAR',
-            'LIBRE'
+            'Approved',
+            'Disapproved',
+            'Stable',
+            'Free'
         ];
 
         foreach($statuses as $status){
