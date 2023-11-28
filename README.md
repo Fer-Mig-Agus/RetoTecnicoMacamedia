@@ -20,8 +20,11 @@
 ### 1. Realizar ABM (alta,baja y modificación) de :
 1.1. Alumnos con los siguientes datos: nombre , apellido , DNI,
 carrera ,teléfono, número de legajo y estado(activo/inactivo).
+
 1.2. Usuarios con los siguientes datos: nombre, correo y contraseña.
+
 1.3. Carreras con los siguientes datos: nombre, duración(años).
+
 1.4. Materias con los siguientes datos: nombre, carrera a la que pertenece, duración (cuatrimestral o anual), horas de cursado. 
 
 ### 2. Realizar la búsqueda de alumnos por nombre, DNI y número de legajo. 
