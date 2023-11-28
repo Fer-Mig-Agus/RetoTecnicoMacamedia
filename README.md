@@ -41,6 +41,7 @@ Para esto el usuario deberá ingresar el alumno, la materia, el estado (aprobado
     NOTA: Para poder realizar el punto 7(siete) se recomienda utilizar un plugin. Además, se sugiere investigar sobre "seeders" para crear carreras y materias inicialmente. 
 </span>
 
+----
 
 
 
