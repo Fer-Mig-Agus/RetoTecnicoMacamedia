@@ -9,7 +9,7 @@
 
 ----
 
-<h1>Desarrollado por <a href="https//portfolio-miguel-fernandez-v2.vercel.app" target="_blank">Miguel Fernandez</a></h1>
+<h1>Desarrollado por <a href="https://portfolio-miguel-fernandez-v2.vercel.app" target="_blank">Miguel Fernandez</a></h1>
 <h3>Para: <a href="https://macamedia.com.ar/" target="_blank">Macamedia</a> </h3>
 
 ----
