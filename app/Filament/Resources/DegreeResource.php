@@ -26,8 +26,10 @@ class DegreeResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name'),
+                TextInput::make('name')
+                ->required(),
                 TextInput::make('duration')
+                ->required()
                 ->numeric(),
             ]);
     }
@@ -37,12 +39,14 @@ class DegreeResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')
+                ->sortable()
                 ->searchable(),
                 TextColumn::make('duration')
+                ->sortable()
                 ->searchable(),
             ])
             ->filters([
-                // SelectFilter::make('')
+                
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

@@ -10,10 +10,12 @@ class Status extends Model
     use HasFactory;
     protected $table='statuses';
 
-// Relacion de uno a muchos con Subject
-    public function subjects()
-    {
-        return $this->hasMany(Subject::class);
-    }
 
+     //Relacion de uno a muchos con Historicals
+     public function historical()
+     {
+         return $this->hasMany(Historical::class);
+     }
+
+     
 }

@@ -31,23 +31,30 @@ class StudentResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name'),
-                TextInput::make('last_name'),
-                TextInput::make('dni'),
-                TextInput::make('phone'),
-                TextInput::make('bundle'),
+                TextInput::make('name')
+                    ->required(),
+                TextInput::make('last_name')
+                    ->required(),
+                TextInput::make('dni')
+                    ->required(),
+                TextInput::make('phone')
+                    ->required(),
+                TextInput::make('bundle')
+                    ->required(),
 
                 Select::make('degree_id')
                     ->label('Degree')
                     ->options(Degree::all()->pluck('name', 'id'))
-                    ->searchable(),
+                    ->searchable()
+                    ->required(),
 
                 Select::make('active')
                     ->label('Active')
                     ->options([
-                        true => 'Yes',
-                        false => 'No'
-                    ]),
+                        true => 'Active',
+                        false => 'Inactive'
+                    ])
+                    ->required(),
 
 
 
@@ -60,26 +67,26 @@ class StudentResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')
+                    ->sortable()
                     ->searchable(),
                 TextColumn::make('last_name')
+                    ->sortable()
                     ->searchable(),
                 TextColumn::make('dni')
                     ->searchable(),
                 TextColumn::make('bundle')
+                    ->sortable()
                     ->searchable(),
-                TextColumn::make('active'),
-                TextColumn::make('degree_id'),
+                TextColumn::make('status'),
+                TextColumn::make('degree.name'),
 
             ])
             ->filters([
-                // SelectFilter::make('active'),
                 SelectFilter::make('Active')
                     ->options([
-                        true => 'Yes',
-                        false => 'No',
+                        true => 'Active',
+                        false => 'Inactive',
                     ])
-
-                
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

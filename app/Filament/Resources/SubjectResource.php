@@ -28,22 +28,26 @@ class SubjectResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name'),
+                TextInput::make('name')
+                ->required(),
                 Select::make('duration')
                     ->label('Duration')
                     ->options([
                         'Quadrimestral' => 'Quadrimestral',
                         'Annual' => 'Annual',
                     ])
-                    ->searchable(),
+                    ->searchable()
+                    ->required(),
 
                 TextInput::make('class_hours')
-                    ->numeric(),
+                    ->numeric()
+                    ->required(),
 
                 Select::make('degree_id')
                     ->label('Degree')
                     ->options(Degree::all()->pluck('name', 'id'))
-                    ->searchable(),
+                    ->searchable()
+                    ->required(),
 
 
 
@@ -57,10 +61,12 @@ class SubjectResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')
+                ->sortable()
                     ->searchable(),
                 TextColumn::make('duration'),
-                TextColumn::make('class_hours'),
-               TextColumn::make('degree_id'),
+                TextColumn::make('class_hours')
+                ->sortable(),
+               TextColumn::make('degree.name'),
                
                 
             ])
@@ -71,8 +77,6 @@ class SubjectResource extends Resource
                         'Quadrimestral' => 'Quadrimestral',
                         'Annual' => 'Annual',
                     ]),
-
-                    // SelectFilter::make('degree')->relationship('degree_id','name')
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
