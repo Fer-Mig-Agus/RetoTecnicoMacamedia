@@ -29,7 +29,7 @@ class StudentSeeder extends Seeder
                 'dni'=>12345678,
                 'phone'=>38512346,
                 'bundle'=>11119998,
-                'active'=>true,
+                'active'=>false,
                 'degree_id'=>1,
 
             ],
@@ -49,7 +49,7 @@ class StudentSeeder extends Seeder
                 'dni'=>123456781,
                 'phone'=>38512245,
                 'bundle'=>10009949,
-                'active'=>true,
+                'active'=>false,
                 'degree_id'=>2,
 
             ],
@@ -69,7 +69,7 @@ class StudentSeeder extends Seeder
                 'dni'=>123456871,
                 'phone'=>385612345,
                 'bundle'=>10409999,
-                'active'=>true,
+                'active'=>false,
                 'degree_id'=>3,
 
             ],
@@ -99,7 +99,7 @@ class StudentSeeder extends Seeder
                 'dni'=>12345289,
                 'phone'=>385123345,
                 'bundle'=>30009991,
-                'active'=>true,
+                'active'=>false,
                 'degree_id'=>5,
 
             ],

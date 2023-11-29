@@ -8,6 +8,7 @@ use App\Models\Historical;
 use App\Models\Status;
 use App\Models\Student;
 use App\Models\Subject;
+use Closure;
 use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
@@ -20,6 +21,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Str;
 
 class HistoricalResource extends Resource
 {
@@ -35,13 +37,25 @@ class HistoricalResource extends Resource
                 ->label('Student')
                 ->options(Student::all()->pluck('student', 'id'))
                 ->required()
-                ->searchable(),
-                
+                ->searchable()
+                ->reactive()
+                ->afterStateUpdated(function(Closure $set,$state){
+                    $set('subject_id',null);
+                }),
+
                 Select::make('subject_id')
-                    ->label('Subject')
-                    ->options(Subject::all()->pluck('name', 'id'))
-                    ->required()
+                    ->label('Subject')                    
+                    ->options(function(callable $get){
+                        if($get('student_id') != null){
+                            return Student::find($get('student_id'))->degree->subjects->pluck('name', 'id');
+                        }else{
+                            return null;
+                        }
+                    })
+                    ->required() 
                     ->searchable(),
+
+                
 
                 Select::make('status_id')
                     ->label('Status')
@@ -64,6 +78,7 @@ class HistoricalResource extends Resource
                 TextColumn::make('student.student')
                 ->sortable()
                 ->searchable(),
+                
                 TextColumn::make('subject.name')
                 ->sortable()
                 ->searchable(),

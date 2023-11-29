@@ -18,6 +18,7 @@ class Historical extends Model
         'status_id',
     ];
 
+    
     //Relacion de uno a muchos con Student
     public function student()
     {

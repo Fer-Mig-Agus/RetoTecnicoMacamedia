@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\DegreeResource\Pages;
 use App\Filament\Resources\DegreeResource\RelationManagers;
+use App\Filament\Resources\DegreeResource\RelationManagers\SubjectsRelationManager;
 use App\Models\Degree;
 use Filament\Forms;
 use Filament\Forms\Components\TextInput;
@@ -59,7 +60,7 @@ class DegreeResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            SubjectsRelationManager::class,
         ];
     }
     
